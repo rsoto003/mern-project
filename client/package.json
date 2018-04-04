@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "Starting setup for react redux project",
   "main": "index.js",
+  "proxy": {
+    "/api/*" : {
+      "target": "http://localhost:9000"
+    }
+  },
   "scripts": {
     "start": "node dev_server.js",
+    "dev": "npm run dev --prefix ..",
     "bundle": "webpack --config webpack.prod.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
