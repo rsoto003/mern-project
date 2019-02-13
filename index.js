@@ -25,11 +25,11 @@ app.use('/api/get-stuff',log('you\'re on the get stuff route, my guy my guy'));
 
 
 app.post('/', (req,res) => {
-    res.send('<h1> Will Cheng is a boo boo ass dude hahahahahahahahaha </h1><p> jk ily bro <3 </p>');
+    res.send('<h1>Testing<3 </p>');
 });
 
 app.post('/api/get-user', (req, res) => {
-    res.send({sucess: true, user: {name: 'Will Cheng', age: 20, jerk: 'yes'}});
+    res.send({sucess: true, user: {name: 'Will Cheng', age: 20}});
 });
 
 app.get('*', (req, res) => {
@@ -37,6 +37,6 @@ app.get('*', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log('will is lame af on port: ', PORT)
+    console.log('port: ', PORT)
 });
 
